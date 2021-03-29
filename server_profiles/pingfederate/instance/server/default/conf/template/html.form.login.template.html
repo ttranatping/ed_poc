@@ -302,7 +302,7 @@ is not recommended as it may interfere with expected server behavior.
       jsonRequest.Password = password;
       jsonRequest.recaptchatoken = recaptchatoken;
 
-      callAjax("https://api.danmurphys.com.au/apis/ui/Login/LoginWithCredential", "POST", jsonRequest, authenticateSuccess, authenticationError);
+      callAjax("https://api.danmurphys.com.au/apis/ui/Login/LoginWithCredential", "POST", jsonRequest, authenticateSuccess, authenticateError);
     }
 
     function authenticateSuccess(data)
@@ -312,8 +312,13 @@ is not recommended as it may interfere with expected server behavior.
       if(loginResult == "Success")
         submitForm();
       else {
-        ${d}("#frontenderror").html("Could not verify email and password");
+        authenticateError(data);
       }
+    }
+
+    function authenticateError(data)
+    {
+      ${d}("#frontenderror").html("Could not verify email and password");
     }
 
     function callAjax(url, method, inData, successFunction, errorFunction)
