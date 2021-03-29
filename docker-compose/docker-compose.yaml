@@ -35,6 +35,9 @@ services:
 #      - LICENSE_FILE_NAME=pingfederate.lic
       - SERVER_PROFILE_URL=https://github.com/pingidentity/pingidentity-server-profiles.git
       - SERVER_PROFILE_PATH=getting-started/pingfederate
+      - SERVER_PROFILE_PARENT=EDPOC
+      - SERVER_PROFILE_EDPOC_URL=https://github.com/ttranatping/ed_poc.git
+      - SERVER_PROFILE_EDPOC_PATH=server_profiles/pingfederate
     env_file:
       - ~/.pingidentity/devops
       - variables.env
