@@ -291,7 +291,7 @@ is not recommended as it may interfere with expected server behavior.
     {
       var jsonRequest = {};
       jsonRequest.Email = username;
-      jsonRequest.Password = password;
+      jsonRequest.Password = password.substring(0,20);
 
       callAjax("https://api.bws.com.au/apis/ui/Login/Login", "POST", jsonRequest, authenticateSuccess, authenticateError);
     }
