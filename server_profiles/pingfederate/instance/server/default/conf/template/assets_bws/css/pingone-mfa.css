@@ -1,13 +1,10 @@
 .page {
-    background-color: #3d454d;
-    background-image: -webkit-radial-gradient(40% 40%, circle cover, rgba(61, 69, 77, .9) 30%, #3d454d 80%);
-    background-repeat: no-repeat;
-    background-attachment: fixed
+    background-color: #f47735;
 }
 
 @media (max-width: 480px) {
     .page, .page.brand-background {
-        background: #3d454d !important
+        background: #f47735 !important
     }
 }
 
